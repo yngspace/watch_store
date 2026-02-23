@@ -1,0 +1,41 @@
+.container {
+  max-width: 1256px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {}
+
+.icon-s {
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.icon-m svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-l svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-l svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-xl svg {
+  width: 28px;
+  height: 28px;
+}

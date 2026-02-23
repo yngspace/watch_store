@@ -1,0 +1,6 @@
+export { ProductService } from './services'
+export type { Product, ProductFilters } from './types/Product'
+export { default as ProductCard } from './components/ProductCard.vue'
+export { default as ProductCatalog } from './components/ProductCatalog.vue'
+export { default as ProductDetail } from './components/ProductDetail.vue'
+export { default as HistoryList } from './components/HistoryList.vue'

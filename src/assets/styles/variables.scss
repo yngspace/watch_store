@@ -1,0 +1,15 @@
+// Цвета
+$font-color: #27282E;
+
+// Тени
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-heavy: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+$base-font: 'Roboto';
+$logo-font: 'Zalando Sans Expanded';
+
+$primary: #8BDCE3;
+$primary-darken: darken($primary, 30%);
+$primary-lighten: lighten($primary, 20%);
+$primary-border: #A3A7B9;
