@@ -29,7 +29,7 @@ export default defineComponent({
 
     const validate = () => {
       Object.entries(model.value).forEach(([key, value]) => {
-        if (!value.trim()) setError(key, 'Поле обязательно для заполнения')
+        if (!value.trim()) setError(key as any, 'Поле обязательно для заполнения')
       })
 
       if (!model.value.mail.includes('@')) setError('mail', 'Проверьте адрес электронной почты')
