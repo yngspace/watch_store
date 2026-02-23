@@ -21,7 +21,7 @@ export default defineComponent({
               <div class="header__logo center">ЧАСЫ.RU</div>
             </router-link>
             <div class="header__btn-group">
-              <div class="icon-xl">{ICONS.search}</div>
+              {/* <div class="icon-xl">{ICONS.search}</div> */}
               <router-link to={{ name: CartPageMeta.name }}>
                 <div class="header__cart-plate">
                   <span class="header__cart-count">{

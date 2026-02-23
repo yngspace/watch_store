@@ -2,7 +2,7 @@
 import { HistoryList, ProductDetail, ProductService, type Product } from '@/modules/product'
 import { DataLoader } from '@/shared/ui';
 import PageHeader from '@/shared/ui/page-header/PageHeader.vue';
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
@@ -28,6 +28,8 @@ export default defineComponent({
     }
 
     onMounted(load)
+
+    watch(() => route.params.id, load)
 
     return () => {
       return (
