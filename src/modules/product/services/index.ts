@@ -13,9 +13,9 @@ export class ProductService extends BaseApi {
       if (filters.gender?.length) condition = condition && Boolean(filters.gender.find(({ id }) => product.gender === id))
       if (filters.movement?.length) condition = condition && Boolean(filters.movement.find(({ id }) => product.movement === id))
       if (filters.strap?.length) condition = condition && Boolean(filters.strap.find(({ id }) => product.strap === id))
-      // if (typeof filters.isNew !== undefined) condition = condition && filters.isNew === product.isNew
-      // if (typeof filters.inStock !== undefined) condition = condition && filters.inStock === product.inStock
-      // if (typeof filters.bestseller !== undefined) condition = condition && filters.bestseller === product.bestseller
+      if (filters.isNew !== undefined) condition = condition && filters.isNew === product.isNew
+      if (filters.inStock !== undefined) condition = condition && filters.inStock === product.inStock
+      if (filters.bestseller !== undefined) condition = condition && filters.bestseller === product.bestseller
       return condition
     })
   }

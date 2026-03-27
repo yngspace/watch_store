@@ -1,6 +1,6 @@
 <script lang="tsx">
-import { computed, defineComponent, ref, type PropType } from 'vue'
-import type { BooleanChoiceFilterInterface, MultipleChoiceFilterInterface } from '../types/FilterInterface'
+import { defineComponent, ref, type PropType } from 'vue'
+import type { BooleanChoiceFilterInterface } from '../types/FilterInterface'
 import FilterWrapper from './FilterWrapper.vue'
 import type { Choice } from '@/shared/types';
 
@@ -19,9 +19,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const modelValue = ref<boolean | undefined>()
 
-    const isSelected = (choice: Choice) => computed(
-      () => modelValue.value === choice.id
-    )
+    const isSelected = (choice: Choice<boolean>) => modelValue.value === choice.id
 
     const update = (choice: Choice<boolean>) => {
       if (modelValue.value === choice.id) {
@@ -51,11 +49,10 @@ export default defineComponent({
                   <p class="bolean-choice-filter__item-title">{choice.name}</p>
 
                   <input
-                    key={String(isSelected(choice).value)}
                     type='radio'
-                    value={isSelected(choice).value}
-                    
-                    onChange={() => update(choice)} />
+                    name={props.item.filterField}
+                    checked={isSelected(choice)}
+                    onClick={() => update(choice)} />
                 </label>
               )
             })}
